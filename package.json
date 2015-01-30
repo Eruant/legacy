@@ -1,0 +1,16 @@
+{
+  "name": "legacy",
+  "devDependencies": {
+    "jspm": "^0.10.6",
+    "live-server": "^0.6.3"
+  },
+  "jspm": {
+    "dependencies": {
+      "jsonp": "npm:jsonp@^0.1.0"
+    }
+  },
+  "scripts": {
+    "start": "live-server",
+    "bundle": "jspm bundle-sfx --minify lib/main"
+  }
+}
