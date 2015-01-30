@@ -6,6 +6,8 @@ class Mob {
         this.setType('m');
         this.setWait(20);
 
+        this.health = 20;
+
         this.modes = {
             0: 'normal'
         };
@@ -62,6 +64,14 @@ class Mob {
 
     setMode(mode) {
         this.mode = mode;
+    }
+
+    heal(amount) {
+        this.health += amount;
+    }
+
+    injure(amount) {
+        this.health -= amount;
     }
 
 }

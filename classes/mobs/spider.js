@@ -5,7 +5,7 @@ class Spider extends Mob {
     constructor(options) {
         super(options);
 
-        this.setType('s');
+        this.setType('⫘');
         this.setWait(40);
     }
 
