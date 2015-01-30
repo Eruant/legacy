@@ -6,6 +6,7 @@ class Spider extends Mob {
         super(options);
 
         this.setType('s');
+        this.setWait(40);
     }
 
 }

@@ -4,6 +4,7 @@ class Mob {
         this.position = {};
         this.setPosition(options.position);
         this.setType('m');
+        this.setWait(20);
 
         this.modes = {
             0: 'normal'
@@ -18,12 +19,24 @@ class Mob {
         this.position.y = position.y;
     }
 
+    setWait(steps) {
+        this.moveTime = steps;
+        this.waitTime = steps;
+    }
+
     setType(type) {
 
         this.type = type;
     }
 
     move() {
+
+        if (this.waitTime > 0) {
+            this.waitTime--;
+            return;
+        } else {
+            this.waitTime = this.moveTime;
+        }
 
         var random = Math.random(),
             x = 0,
