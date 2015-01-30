@@ -1,12 +1,9 @@
 class Mob {
 
-    constructor() {
-        this.position = {
-            x: null,
-            y: null
-        };
-
-        this.type = 'm';
+    constructor(options) {
+        this.position = {};
+        this.setPosition(options.position);
+        this.setType('m');
     }
 
     setPosition(position) {
@@ -18,11 +15,6 @@ class Mob {
     setType(type) {
 
         this.type = type;
-    }
-
-    debug() {
-        console.log('type', this.type);
-        console.log('position x:%s y: %s', this.position.x, this.position.y);
     }
 
 }
