@@ -9,6 +9,7 @@ class Mob {
         this.setWait(20);
 
         this.health = 20;
+        this.damage = 1;
 
         this.modes = {
             0: 'normal'
@@ -75,6 +76,13 @@ class Mob {
 
     injure(amount) {
         this.health -= amount;
+
+        if (this.health <= 0) {
+            return false;
+        }
+
+        // return counter move (true / false);
+        return (Math.random() > 0.4);
     }
 
 }
