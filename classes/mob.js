@@ -1,9 +1,11 @@
+import tiles from '../lib/tileKey';
+
 class Mob {
 
     constructor(options) {
         this.position = {};
         this.setPosition(options.position);
-        this.setType('m');
+        this.setType('?');
         this.setWait(20);
 
         this.health = 20;
@@ -13,6 +15,7 @@ class Mob {
         };
 
         this.mode = 0;
+        this.tiles = tiles.mobs;
     }
 
     setPosition(position) {

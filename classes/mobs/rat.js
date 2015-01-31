@@ -5,7 +5,7 @@ class Rat extends Mob {
     constructor(options) {
         super(options);
 
-        this.setType('⟜');
+        this.setType(this.tiles.rat);
     }
 
 }
