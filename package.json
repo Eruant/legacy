@@ -11,6 +11,9 @@
   },
   "scripts": {
     "start": "live-server",
-    "bundle": "jspm bundle-sfx --minify lib/main"
+    "bundle": "jspm bundle-sfx --minify lib/main",
+    "rebundle-with-shim": "cat jspm_packages/traceur-runtime.js spacer.js build.js > build/bundle.js",
+    "copy-index": "cp index.html build/ && cp build.js.map build/",
+    "build": "npm run bundle && npm run rebundle-with-shim && npm run copy-index"
   }
 }
