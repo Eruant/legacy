@@ -10,6 +10,7 @@ class Mob {
 
         this.health = 20;
         this.damage = 1;
+        this.score = 1;
 
         this.modes = {
             0: 'normal'
